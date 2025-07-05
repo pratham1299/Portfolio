@@ -116,7 +116,7 @@ export default function Portfolio() {
           url: "https://docs.google.com/document/d/1wNGdhMstvGotL65JRDWgX0_osKTYIlyyUdV-q0wEPzg/edit?usp=sharing",
         },
         {
-          name: "Roadmap for outbound process",
+          name: "Outbound Process",
           url: "https://docs.google.com/document/d/1rDi2dh8VJ-r0fHJCAr-EdVEn4nLhV1dlVv7VP4_s0c4/edit?usp=sharing",
         },
         {
@@ -482,8 +482,8 @@ export default function Portfolio() {
 
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
               <span className="bg-gradient-to-r from-gray-900 text-[35px] via-blue-900 to-purple-900 bg-clip-text text-transparent">
-                Driving data-backed decisions and strategic growth through
-                cross-channel marketing intelligence.{" "}
+                Driving Holistic Marketing Success Through Insight,
+                Innovation, and Execution
               </span>
               {/* <span className="text-blue-600">Whatever it takes.</span> */}
             </h1>
