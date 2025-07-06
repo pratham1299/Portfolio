@@ -60,20 +60,24 @@ export default function Portfolio() {
       textColor: "text-pink-600",
       subcategories: [
         {
-          name: "Business Plan Template for an Established Business",
-          url: businessPlanPdf,
+          name: "Cosmetic and skincare brand Suggestions",
+          url: "https://docs.google.com/spreadsheets/d/1-HSEP8EPO_Vna4MKsiAMkEv-gpngZlGVy4D7z1FdjLA/edit?usp=sharing",
         },
         {
-          name: "Business Plan Document for the Upcoming Year",
-          url: "https://docs.google.com/document/d/1M6UFJ-qoyHyithVumgco5YKfQeHauS9lQBzYz2C3slI/edit?usp=sharing",
+          name: "Personal Care Growth hacks",
+          url: "https://docs.google.com/spreadsheets/u/2/d/1a9nn4fDFpBKdXBVMEtWd_XG0KctjjLScIww3fsPNnA8/edit?usp=sharing",
         },
         {
           name: "Functionalities for a D2C Jewellery Store",
           url: "https://docs.google.com/document/d/1FaSEjfRH0uqR2wf4F1f5CFiNRLypYNPHyaugwWMqWiw/edit?usp=sharing",
         },
         {
-          name: "Personal Care Growth hacks",
-          url: "https://docs.google.com/spreadsheets/u/2/d/1a9nn4fDFpBKdXBVMEtWd_XG0KctjjLScIww3fsPNnA8/edit?usp=sharing",
+          name: "Business Plan Document for the Upcoming Year",
+          url: "https://docs.google.com/document/d/1M6UFJ-qoyHyithVumgco5YKfQeHauS9lQBzYz2C3slI/edit?usp=sharing",
+        },
+        {
+          name: "Business Plan Template for an Established Business",
+          url: businessPlanPdf,
         },
         {
           name: "Content Framework Template",
@@ -84,20 +88,12 @@ export default function Portfolio() {
           url: "https://docs.google.com/document/d/19AolS9hnQ53GgA3vThboX324c84aIRJYx_5iKUoxo9Q/edit?usp=sharing",
         },
         {
-          name: "White labelling Email template",
-          url: "https://docs.google.com/document/d/1-c-tDsdJ9SgsKw2NBzceyEZX8UxfT1ELwBRKa4ikHS4/edit?usp=sharing",
-        },
-        {
           name: "Direct Gift Marketing Campaign",
           url: "https://docs.google.com/presentation/d/11t_pes8vYTczSRb2z2cBtlTjW6lerbksbULhBLFzqEc/edit?usp=sharing",
         },
         {
           name: "ORM (Online Reputation Management)",
           url: "https://docs.google.com/document/d/11kvdozO65yImotxygUYNan8kZ6ZaLN0E9wIHq_R6V1A/edit?usp=sharing",
-        },
-        {
-          name: "Cosmetic and skincare brand Suggestions",
-          url: "https://docs.google.com/spreadsheets/d/1-HSEP8EPO_Vna4MKsiAMkEv-gpngZlGVy4D7z1FdjLA/edit?usp=sharing",
         },
       ],
     },
@@ -122,6 +118,10 @@ export default function Portfolio() {
         {
           name: "Mail Templates (Platform change)",
           url: "https://docs.google.com/document/d/1adeiRqYQz-3-Lkuq8D9YmEDLXFioa-0c_m5EA8-4_ig/edit?usp=sharing",
+        },
+        {
+          name: "White labelling Email template",
+          url: "https://docs.google.com/document/d/1-c-tDsdJ9SgsKw2NBzceyEZX8UxfT1ELwBRKa4ikHS4/edit?usp=sharing",
         },
         {
           name: "Additional Contributions",
