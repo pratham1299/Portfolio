@@ -79,12 +79,6 @@ export default function Portfolio() {
           name: "Content Framework Template",
           url: "https://docs.google.com/spreadsheets/d/15KYfJgBCMdN6xasRhPgyoHKein0p2bFoxdwsr69dL04/edit?usp=sharing",
         },
-
-        {
-          name: "One pager -CRO Action Plan",
-          url: "https://docs.google.com/presentation/d/15qEWEcjXVkJdgqPsB7pnaEKyE07_TtFneWtgCCQZrrQ/edit?usp=sharing",
-        },
-
         {
           name: "Quora Marketing Plan for ABC company",
           url: "https://docs.google.com/document/d/19AolS9hnQ53GgA3vThboX324c84aIRJYx_5iKUoxo9Q/edit?usp=sharing",
@@ -122,18 +116,6 @@ export default function Portfolio() {
           url: "https://docs.google.com/document/d/1rDi2dh8VJ-r0fHJCAr-EdVEn4nLhV1dlVv7VP4_s0c4/edit?usp=sharing",
         },
         {
-          name: "Buyer's Persona",
-          url: buyerPersonaPdf,
-        },
-        {
-          name: "Countries Business Culture",
-          url: "https://docs.google.com/document/d/1LO46wPrM15zIE8WPpPWahJlUX3IxSdCL63RV_DS-Blw/edit?usp=sharing",
-        },
-        {
-          name: "Business Development: Outbound",
-          url: "https://docs.google.com/presentation/d/1CQ6AVHrZIubkZ45jEU6oORRB9IPjZ3jFF-Zo6JG9aZI/edit?usp=sharing",
-        },
-        {
           name: "Outbound Follow-Up Emails",
           url: "https://docs.google.com/document/d/14828VRfwj2wZmKO2U1wcGEK2htaNyzk-512sdXYnFzM/edit?usp=sharing",
         },
@@ -147,7 +129,38 @@ export default function Portfolio() {
         },
       ],
     },
-
+    "Account-Based Marketing": {
+      icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
+      bgColor: "bg-indigo-100",
+      hoverBgColor: "group-hover:bg-indigo-200",
+      textColor: "text-indigo-600",
+      subcategories: [
+        {
+          name: "Buyer's Persona",
+          url: buyerPersonaPdf,
+        },
+        {
+          name: "Countries Business Culture",
+          url: "https://docs.google.com/document/d/1LO46wPrM15zIE8WPpPWahJlUX3IxSdCL63RV_DS-Blw/edit?usp=sharing",
+        },
+        {
+          name: "One pager-CRO Action Plan",
+          url: "https://docs.google.com/presentation/d/15qEWEcjXVkJdgqPsB7pnaEKyE07_TtFneWtgCCQZrrQ/edit?usp=sharing",
+        },
+        {
+          name: "Business Development: Outbound",
+          url: "https://docs.google.com/presentation/d/1CQ6AVHrZIubkZ45jEU6oORRB9IPjZ3jFF-Zo6JG9aZI/edit?usp=sharing",
+        },
+        {
+          name: "CRO Audit Template",
+          url: "https://docs.google.com/presentation/d/1NoY9NDFuqIiZzFX58FCVI8b7pxdmuxn9x6zlZwuAB0g/edit?usp=sharing",
+        },
+        {
+          name: "CRO Excel Template",
+          url: "https://docs.google.com/spreadsheets/d/1r90kfRsW_Vv0NXJO6KI6k_cmcvaHLqUSMwlUn12yL-U/edit?usp=sharing",
+        },
+      ],
+    },
     "Marketing Funnel": {
       icon: "M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z",
       bgColor: "bg-orange-100",
@@ -160,27 +173,19 @@ export default function Portfolio() {
         },
       ],
     },
-    "SEO & Link Building": {
+    "Performance & SEO Marketing": {
       icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
       bgColor: "bg-purple-100",
       hoverBgColor: "group-hover:bg-purple-200",
       textColor: "text-purple-600",
       subcategories: [
         {
-          name: "SEO & Backlinking Experience",
-          url: "https://docs.google.com/document/d/1vT2A9rd-EHZnau1ZUeMpWQyiSxdk0AdzNQuDq7y58CE/edit?usp=sharing",
-        },
-      ],
-    },
-    "Performance Marketing": {
-      icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
-      bgColor: "bg-indigo-100",
-      hoverBgColor: "group-hover:bg-indigo-200",
-      textColor: "text-indigo-600",
-      subcategories: [
-        {
           name: "Performance Marketing Expertise",
           url: "https://docs.google.com/document/d/1wi96QhPeDqUaFyPcJKykgqpcdkN2ZCoqTaUdiEaEHTg/edit?usp=sharing",
+        },
+        {
+          name: "SEO & Backlinking Experience",
+          url: "https://docs.google.com/document/d/1vT2A9rd-EHZnau1ZUeMpWQyiSxdk0AdzNQuDq7y58CE/edit?usp=sharing",
         },
       ],
     },
@@ -318,11 +323,13 @@ export default function Portfolio() {
                                       setIsServicesOpen(false);
                                       setActiveSubmenu(null);
                                     }}
-                                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group"
+                                    className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group text-left"
                                   >
-                                    <span>{subcategory.name}</span>
+                                    <span className="flex-1 text-left leading-relaxed">
+                                      {subcategory.name}
+                                    </span>
                                     <svg
-                                      className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                      className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-2 flex-shrink-0"
                                       fill="none"
                                       stroke="currentColor"
                                       viewBox="0 0 24 24"
@@ -395,15 +402,15 @@ export default function Portfolio() {
 
         {/* Enhanced Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-screen overflow-y-auto">
-            <div className="container mx-auto px-2 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4 max-w-xs sm:max-w-none">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-[80vh] overflow-y-auto overscroll-contain">
+            <div className="container mx-auto px-2 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4 max-w-xs sm:max-w-none min-h-0">
               <a
                 href="#home"
-                className="flex items-center py-2 sm:py-3 px-2 sm:px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-sm sm:text-base"
+                className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3"
+                  className="w-5 h-5 mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -425,7 +432,7 @@ export default function Portfolio() {
                     setMobileWorksOpen(!mobileWorksOpen);
                     setMobileActiveSubmenu(null);
                   }}
-                  className="w-full flex items-center justify-between py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
+                  className="w-full flex items-center justify-between py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-base"
                 >
                   <div className="flex items-center">
                     <svg
@@ -461,7 +468,7 @@ export default function Portfolio() {
                 </button>
 
                 {mobileWorksOpen && (
-                  <div className="ml-2 space-y-2 animate-in slide-in-from-top-2 duration-300">
+                  <div className="ml-2 space-y-2 animate-in slide-in-from-top-2 duration-300 max-h-[60vh] overflow-y-auto">
                     {Object.entries(workCategories).map(([category, data]) => (
                       <div key={category} className="space-y-1">
                         <button
@@ -512,7 +519,7 @@ export default function Portfolio() {
                         </button>
 
                         {mobileActiveSubmenu === category && (
-                          <div className="ml-3 space-y-1 animate-in slide-in-from-left-2 duration-300">
+                          <div className="ml-3 space-y-1 animate-in slide-in-from-left-2 duration-300 max-h-[40vh] overflow-y-auto">
                             {data.subcategories.map((subcategory) => (
                               <a
                                 key={subcategory.name}
@@ -524,11 +531,13 @@ export default function Portfolio() {
                                   setMobileWorksOpen(false);
                                   setMobileActiveSubmenu(null);
                                 }}
-                                className="flex items-center justify-between py-2 px-3 text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                className="flex items-center py-2 px-3 text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200 text-left"
                               >
-                                <span>{subcategory.name}</span>
+                                <span className="flex-1 text-left leading-relaxed">
+                                  {subcategory.name}
+                                </span>
                                 <svg
-                                  className="w-2 h-2 opacity-60"
+                                  className="w-2 h-2 opacity-60 ml-2 flex-shrink-0"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -551,7 +560,7 @@ export default function Portfolio() {
               </div>
               <a
                 href="#contact"
-                className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
+                className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <svg
@@ -914,7 +923,7 @@ export default function Portfolio() {
               </div>
               <p className="text-xl md:text-2xl font-light">Hands-On Tools</p>
               <p className="text-blue-100 mt-2">
-                Meta, Google, Apollo.io, LinkedIn Sales Navigator, GA4  etc
+                Meta, Google, Apollo.io, LinkedIn Sales Navigator, GA4, etc
               </p>
             </div>
 
@@ -1052,7 +1061,7 @@ export default function Portfolio() {
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-blue-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
-                    UI/UX Insight
+                    A/B Testing
                   </span>
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
@@ -1062,7 +1071,7 @@ export default function Portfolio() {
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-purple-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
-                    Canva
+                    Graphic Analysis
                   </span>
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
@@ -1090,7 +1099,7 @@ export default function Portfolio() {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-gray-900">
               <span className="bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
-                Projects
+                Projects Overview
               </span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
@@ -1152,6 +1161,57 @@ export default function Portfolio() {
             </div>
 
             <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-3 text-gray-900">
+                Marketing Funnel
+              </h4>
+              <p className="text-gray-600">
+                Analyzed user behavior and optimized marketing funnels to boost
+                conversion rates across multiple digital assets.
+              </p>
+            </div>
+
+            <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-3 text-gray-900">
+                Account-Based Marketing
+              </h4>
+              <p className="text-gray-600">
+                Executed personalized outreach strategies targeting high-value
+                accounts across LinkedIn and email. Aligned messaging with
+                decision-maker pain points to improve engagement.
+              </p>
+            </div>
+
+            <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-6 h-6 text-white"
@@ -1194,61 +1254,12 @@ export default function Portfolio() {
                 </svg>
               </div>
               <h4 className="text-xl font-bold mb-3 text-gray-900">
-                Off-Page SEO & Link-Building
+                Performance & SEO Marketing
               </h4>
               <p className="text-gray-600">
-                Implemented off-page SEO strategies to increase domain authority
-                and drive organic traffic through high-quality backlinks.
-              </p>
-            </div>
-
-            <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                  />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold mb-3 text-gray-900">
-                Marketing Funnel
-              </h4>
-              <p className="text-gray-600">
-                Analyzed user behavior and optimized marketing funnels to boost
-                conversion rates across multiple digital assets.
-              </p>
-            </div>
-
-            <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold mb-3 text-gray-900">
-                Performance Marketing Campaigns
-              </h4>
-              <p className="text-gray-600">
-                Optimized full-funnel paid ad campaigns to generate high-quality
-                leads and maximize ROI for B2B/B2C clients.
+                Executed integrated SEO and performance marketing strategies to
+                boost domain authority, drive organic traffic, and optimize paid
+                campaigns for lead generation and ROI.
               </p>
             </div>
           </div>
@@ -1269,7 +1280,7 @@ export default function Portfolio() {
                 Smart with research, sharp with outreach, and built for impact.
                 Let's bring your brand's voice to life.
               </p>
-              <div className="flex space-x-4 justify-center gap-10">
+              <div className="flex space-x-4 justify-center gap-6 sm:gap-10">
                 {/* <a
                   href="#"
                   className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"
