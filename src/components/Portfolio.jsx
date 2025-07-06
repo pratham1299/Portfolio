@@ -396,10 +396,10 @@ export default function Portfolio() {
         {/* Enhanced Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-screen overflow-y-auto">
-            <div className="container mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4 max-w-sm sm:max-w-none">
+            <div className="container mx-auto px-2 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4 max-w-xs sm:max-w-none">
               <a
                 href="#home"
-                className="flex items-center py-2 sm:py-3 px-3 sm:px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-sm sm:text-base"
+                className="flex items-center py-2 sm:py-3 px-2 sm:px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-sm sm:text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <svg
@@ -461,7 +461,7 @@ export default function Portfolio() {
                 </button>
 
                 {mobileWorksOpen && (
-                  <div className="ml-4 space-y-2 animate-in slide-in-from-top-2 duration-300">
+                  <div className="ml-2 space-y-2 animate-in slide-in-from-top-2 duration-300">
                     {Object.entries(workCategories).map(([category, data]) => (
                       <div key={category} className="space-y-1">
                         <button
@@ -512,7 +512,7 @@ export default function Portfolio() {
                         </button>
 
                         {mobileActiveSubmenu === category && (
-                          <div className="ml-6 space-y-1 animate-in slide-in-from-left-2 duration-300">
+                          <div className="ml-3 space-y-1 animate-in slide-in-from-left-2 duration-300">
                             {data.subcategories.map((subcategory) => (
                               <a
                                 key={subcategory.name}
