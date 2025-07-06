@@ -7,6 +7,8 @@ export default function Portfolio() {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileWorksOpen, setMobileWorksOpen] = useState(false);
+  const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -194,130 +196,103 @@ export default function Portfolio() {
             : "bg-gradient-to-r from-white/80 via-white/60 to-white/80 backdrop-blur-sm py-5"
         }`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          {/* Enhanced Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg">P</span>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="flex justify-between items-center">
+            {/* Enhanced Logo */}
+            <div className="flex items-center space-x-3 flex-shrink-0">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg">P</span>
+              </div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Priyanshi Gupta
+                </span>
+              </div>
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-gray-900">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Priyanshi Gupta
-              </span>
-            </div>
-          </div>
 
-          {/* Enhanced Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-10 pr-5">
-            <a
-              href="#home"
-              className="relative group text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a>
-
-            <div ref={dropdownRef} className="relative group">
-              <button
-                onClick={() => {
-                  setIsServicesOpen(!isServicesOpen);
-                  setActiveSubmenu(null);
-                }}
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg group"
-              >
-                Works
-                <svg
-                  className={`w-5 h-5 ml-2 transition-all duration-300 ${
-                    isServicesOpen ? "rotate-180 text-blue-600" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            {/* Enhanced Desktop Menu - Centered */}
+            <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
+              <div className="flex items-center space-x-8">
+                <a
+                  href="#home"
+                  className="relative group text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-              </button>
+                  Home
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
 
-              {isServicesOpen && (
-                <div className="absolute left-0 mt-4 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl py-4 z-20 border border-gray-100 animate-in slide-in-from-top-4 duration-500 max-h-96 overflow-y-auto">
-                  <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-                    My Work
-                  </div>
+                <div ref={dropdownRef} className="relative group">
+                  <button
+                    onClick={() => {
+                      setIsServicesOpen(!isServicesOpen);
+                      setActiveSubmenu(null);
+                    }}
+                    className="flex items-center text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg group"
+                  >
+                    Works
+                    <svg
+                      className={`w-5 h-5 ml-2 transition-all duration-300 ${
+                        isServicesOpen ? "rotate-180 text-blue-600" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                  </button>
 
-                  {Object.entries(workCategories).map(([category, data]) => (
-                    <div key={category} className="relative">
-                      <button
-                        onClick={() =>
-                          setActiveSubmenu(
-                            activeSubmenu === category ? null : category
-                          )
-                        }
-                        className="w-full flex items-center justify-between px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-lg mx-2 group"
-                      >
-                        <div className="flex items-center">
-                          <div
-                            className={`w-8 h-8 ${data.bgColor} rounded-lg flex items-center justify-center mr-3 ${data.hoverBgColor} transition-colors flex-shrink-0`}
-                          >
-                            <svg
-                              className={`w-4 h-4 ${data.textColor}`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
+                  {isServicesOpen && (
+                    <div className="absolute left-0 mt-4 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl py-4 z-20 border border-gray-100 animate-in slide-in-from-top-4 duration-500 max-h-96 overflow-y-auto">
+                      <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                        My Work
+                      </div>
+
+                      {Object.entries(workCategories).map(
+                        ([category, data]) => (
+                          <div key={category} className="relative">
+                            <button
+                              onClick={() =>
+                                setActiveSubmenu(
+                                  activeSubmenu === category ? null : category
+                                )
+                              }
+                              className="w-full flex items-center justify-between px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-lg mx-2 group"
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d={data.icon}
-                              />
-                            </svg>
-                          </div>
-                          <div className="text-left flex-1">
-                            <div className="font-semibold text-gray-900">
-                              {category}
-                            </div>
-                          </div>
-                        </div>
-                        <svg
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeSubmenu === category ? "rotate-90" : ""
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </button>
-
-                      {activeSubmenu === category && (
-                        <div className="ml-6 mt-2 space-y-1 animate-in slide-in-from-left-2 duration-300">
-                          {data.subcategories.map((subcategory) => (
-                            <a
-                              key={subcategory.name}
-                              href={subcategory.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={() => {
-                                setIsServicesOpen(false);
-                                setActiveSubmenu(null);
-                              }}
-                              className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group"
-                            >
-                              <span>{subcategory.name}</span>
+                              <div className="flex items-center">
+                                <div
+                                  className={`w-8 h-8 ${data.bgColor} rounded-lg flex items-center justify-center mr-3 ${data.hoverBgColor} transition-colors flex-shrink-0`}
+                                >
+                                  <svg
+                                    className={`w-4 h-4 ${data.textColor}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d={data.icon}
+                                    />
+                                  </svg>
+                                </div>
+                                <div className="text-left flex-1">
+                                  <div className="font-semibold text-gray-900">
+                                    {category}
+                                  </div>
+                                </div>
+                              </div>
                               <svg
-                                className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                className={`w-4 h-4 transition-transform duration-200 ${
+                                  activeSubmenu === category ? "rotate-90" : ""
+                                }`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -326,67 +301,102 @@ export default function Portfolio() {
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
                                   strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  d="M9 5l7 7-7 7"
                                 />
                               </svg>
-                            </a>
-                          ))}
-                        </div>
+                            </button>
+
+                            {activeSubmenu === category && (
+                              <div className="ml-6 mt-2 space-y-1 animate-in slide-in-from-left-2 duration-300">
+                                {data.subcategories.map((subcategory) => (
+                                  <a
+                                    key={subcategory.name}
+                                    href={subcategory.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => {
+                                      setIsServicesOpen(false);
+                                      setActiveSubmenu(null);
+                                    }}
+                                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 group"
+                                  >
+                                    <span>{subcategory.name}</span>
+                                    <svg
+                                      className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                      />
+                                    </svg>
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )
                       )}
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
+
+                <a
+                  href="#contact"
+                  className="relative group text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+                >
+                  Contact
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+              </div>
             </div>
 
-            <a
-              href="#contact"
-              className="relative group text-gray-700 hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </a>
+            {/* CTA Button - Right Side */}
+            <div className="hidden lg:flex items-center flex-shrink-0">
+              <a
+                href="#contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg whitespace-nowrap"
+              >
+                Get Started
+              </a>
+            </div>
 
-            {/* CTA Button */}
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            {/* Enhanced Mobile Menu Button */}
+            <button
+              className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 border border-gray-200"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              Get Started
-            </a>
+              <svg
+                className={`w-6 h-6 transition-transform duration-300 ${
+                  isMobileMenuOpen ? "rotate-45" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={
+                    isMobileMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
+                />
+              </svg>
+            </button>
           </div>
-
-          {/* Enhanced Mobile Menu Button */}
-          <button
-            className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 border border-gray-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className={`w-6 h-6 transition-transform duration-300 ${
-                isMobileMenuOpen ? "rotate-45" : ""
-              }`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={
-                  isMobileMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
-            </svg>
-          </button>
         </div>
 
         {/* Enhanced Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl">
-            <div className="container mx-auto px-6 py-6 space-y-4">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-screen overflow-y-auto">
+            <div className="container mx-auto px-4 sm:px-6 py-6 space-y-4">
               <a
                 href="#home"
                 className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
@@ -407,26 +417,138 @@ export default function Portfolio() {
                 </svg>
                 Home
               </a>
-              <a
-                href="#services"
-                className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <svg
-                  className="w-5 h-5 mr-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+
+              {/* Mobile Works Dropdown */}
+              <div className="space-y-2">
+                <button
+                  onClick={() => {
+                    setMobileWorksOpen(!mobileWorksOpen);
+                    setMobileActiveSubmenu(null);
+                  }}
+                  className="w-full flex items-center justify-between py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"
-                  />
-                </svg>
-                Services
-              </a>
+                  <div className="flex items-center">
+                    <svg
+                      className="w-5 h-5 mr-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                      />
+                    </svg>
+                    Works
+                  </div>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      mobileWorksOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {mobileWorksOpen && (
+                  <div className="ml-4 space-y-2 animate-in slide-in-from-top-2 duration-300">
+                    {Object.entries(workCategories).map(([category, data]) => (
+                      <div key={category} className="space-y-1">
+                        <button
+                          onClick={() =>
+                            setMobileActiveSubmenu(
+                              mobileActiveSubmenu === category ? null : category
+                            )
+                          }
+                          className="w-full flex items-center justify-between py-2 px-3 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 rounded-lg text-sm font-medium"
+                        >
+                          <div className="flex items-center">
+                            <div
+                              className={`w-6 h-6 ${data.bgColor} rounded-md flex items-center justify-center mr-2 flex-shrink-0`}
+                            >
+                              <svg
+                                className={`w-3 h-3 ${data.textColor}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d={data.icon}
+                                />
+                              </svg>
+                            </div>
+                            <span>{category}</span>
+                          </div>
+                          <svg
+                            className={`w-3 h-3 transition-transform duration-200 ${
+                              mobileActiveSubmenu === category
+                                ? "rotate-90"
+                                : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+
+                        {mobileActiveSubmenu === category && (
+                          <div className="ml-6 space-y-1 animate-in slide-in-from-left-2 duration-300">
+                            {data.subcategories.map((subcategory) => (
+                              <a
+                                key={subcategory.name}
+                                href={subcategory.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setMobileWorksOpen(false);
+                                  setMobileActiveSubmenu(null);
+                                }}
+                                className="flex items-center justify-between py-2 px-3 text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                              >
+                                <span>{subcategory.name}</span>
+                                <svg
+                                  className="w-2 h-2 opacity-60"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  />
+                                </svg>
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
               <a
                 href="#contact"
                 className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
@@ -468,20 +590,20 @@ export default function Portfolio() {
       >
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-20 sm:top-40 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-4 sm:-bottom-8 left-8 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
-        <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+            <div className="mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+              <span className="inline-block px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 ✨ Associate Business Development Executive
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
-              <span className="bg-gradient-to-r from-gray-900 text-[35px] via-blue-900 to-purple-900 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-gray-900 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
+              <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent block">
                 Driving Holistic Marketing Success Through Insight,
                 Innovation, and Execution
               </span>
@@ -489,14 +611,14 @@ export default function Portfolio() {
             </h1>
 
             <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
-              <p className="text-2xl md:text-3xl mb-6 text-gray-700 font-light">
+              <p className="text-xl sm:text-2xl md:text-3xl mb-6 text-gray-700 font-light">
                 Hi there, my name is{" "}
                 <span className="font-semibold text-blue-600">
                   {" "}
                   Priyanshi Gupta
                 </span>
               </p>
-              <p className="text-lg md:text-xl mb-12 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 md:mb-12 text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
                 I'm a results-oriented Associate Business Development Executive
                 with hands-on experience in performance marketing, outbound
                 campaigns, research & development, off-page, SEO, and
@@ -504,10 +626,10 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-600">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-600 px-4">
               <a
                 href="#contact"
-                className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-block text-center"
+                className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-block text-center text-sm sm:text-base"
               >
                 <span className="flex items-center">
                   GET IN TOUCH
@@ -528,7 +650,7 @@ export default function Portfolio() {
               </a>
               <a
                 href="#projects"
-                className="group border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center"
+                className="group border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center text-sm sm:text-base"
               >
                 <span className="flex items-center">
                   VIEW MY WORK
@@ -565,18 +687,18 @@ export default function Portfolio() {
         className="py-16 lg:py-20 bg-white relative overflow-hidden min-h-screen flex items-center"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50 opacity-50"></div>
-        <div className="relative z-10 container mx-auto px-4 lg:px-6 w-full">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Section Header */}
-          <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="inline-block px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium mb-4">
               ✨ My Expertise
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 text-gray-900">
               <span className="bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
                 What I Do Best
               </span>
             </h2>
-            <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
               My expertise lies in using data to optimize customer journeys,
               improve marketing ROI, and develop insights-driven
               campaigns that scale.
@@ -584,10 +706,10 @@ export default function Portfolio() {
           </div>
 
           {/* Services Grid - Optimized for screen fit */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
             {/* Service Card 1 */}
-            <div className="group bg-white p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full">
-              <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="group bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-7 h-7 lg:w-8 lg:h-8 text-white"
                   fill="none"
@@ -772,8 +894,8 @@ export default function Portfolio() {
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div className="group">
               <div className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-br from-white to-blue-100 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                 25+
@@ -811,22 +933,22 @@ export default function Portfolio() {
       </section>
 
       {/* Contact & Info Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+      <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-gray-900">
               <span className="bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
                 Let's Work Together
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Ready to transform your brand's voice? Get in touch and let's
               create something amazing.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 sm:p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
@@ -846,22 +968,26 @@ export default function Portfolio() {
                 Contact Info
               </h3>
               <div className="space-y-3">
-                <p className="flex items-center text-gray-700">
-                  <span className="font-semibold mr-2">Name:</span> Priyanshi
-                  Gupta
+                <p className="flex flex-col sm:flex-row sm:items-center text-gray-700">
+                  <span className="font-semibold mr-2 mb-1 sm:mb-0">Name:</span>
+                  <span>Priyanshi Gupta</span>
                 </p>
-                <p className="flex items-center text-gray-700">
-                  <span className="font-semibold mr-2">Email:</span>
+                <p className="flex flex-col sm:flex-row sm:items-center text-gray-700">
+                  <span className="font-semibold mr-2 mb-1 sm:mb-0">
+                    Email:
+                  </span>
                   <a
                     href="mailto:guptapriyanshi1503@gmail.com"
-                    className="text-blue-600 hover:text-blue-800 transition-colors"
+                    className="text-blue-600 hover:text-blue-800 transition-colors break-all sm:break-normal text-sm sm:text-base"
                   >
                     guptapriyanshi1503@gmail.com
                   </a>
                 </p>
-                <p className="flex items-center text-gray-700">
-                  <span className="font-semibold mr-2">Contact:</span>{" "}
-                  7398498519
+                <p className="flex flex-col sm:flex-row sm:items-center text-gray-700">
+                  <span className="font-semibold mr-2 mb-1 sm:mb-0">
+                    Contact:
+                  </span>
+                  <span>7398498519</span>
                 </p>
               </div>
             </div>
@@ -958,25 +1084,25 @@ export default function Portfolio() {
       {/* Project Types Section */}
       <section
         id="projects"
-        className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+        className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50"
       >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-gray-900">
               <span className="bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Delivered data-driven marketing initiatives including LinkedIn
               outreach, PPC optimization, SEO tactics, and R&D to inform
               decision-making and fuel growth
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+            <div className="group bg-white p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
@@ -1130,16 +1256,16 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="grid md:grid-cols-4 gap-8 mb-8 ">
-            <div className="md:col-span-2 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-white">
+      <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="sm:col-span-2 lg:col-span-2 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Priyanshi Gupta
                 </span>
               </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Smart with research, sharp with outreach, and built for impact.
                 Let's bring your brand's voice to life.
               </p>
@@ -1160,10 +1286,10 @@ export default function Portfolio() {
                   href="https://www.linkedin.com/in/priyanshi-gupta-157006202"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors mx-auto sm:mx-0"
+                  className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors mx-auto sm:mx-0"
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -1172,10 +1298,10 @@ export default function Portfolio() {
                 </a>
                 <a
                   href="mailto:guptapriyanshi1503@gmail.com"
-                  className="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors mx-auto sm:mx-0"
+                  className="w-8 h-8 sm:w-10 sm:h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors mx-auto sm:mx-0"
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -1228,8 +1354,10 @@ export default function Portfolio() {
             </div>
 
             <div className="text-center">
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-300">
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                Quick Links
+              </h4>
+              <ul className="space-y-1 sm:space-y-2 text-gray-300 text-sm sm:text-base">
                 <li>
                   <a
                     href="#home"
@@ -1266,8 +1394,8 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-gray-400">
+          <div className="border-t border-gray-700 pt-6 sm:pt-8 text-center">
+            <p className="text-gray-400 text-xs sm:text-sm">
               © {new Date().getFullYear()} Priyanshi Gupta. All rights reserved.
               |
               <span className="text-blue-400">
