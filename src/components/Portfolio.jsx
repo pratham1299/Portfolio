@@ -196,7 +196,7 @@ export default function Portfolio() {
             : "bg-gradient-to-r from-white/80 via-white/60 to-white/80 backdrop-blur-sm py-5"
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="flex justify-between items-center">
             {/* Enhanced Logo */}
             <div className="flex items-center space-x-3 flex-shrink-0">
@@ -210,8 +210,8 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Enhanced Desktop Menu - Centered */}
-            <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
+            {/* Enhanced Desktop Menu - Left-aligned */}
+            <div className="hidden lg:flex items-center justify-start flex-1 ml-12">
               <div className="flex items-center space-x-8">
                 <a
                   href="#home"
@@ -367,7 +367,7 @@ export default function Portfolio() {
 
             {/* Enhanced Mobile Menu Button */}
             <button
-              className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 border border-gray-200"
+              className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 border border-gray-200 mr-4"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
@@ -396,14 +396,14 @@ export default function Portfolio() {
         {/* Enhanced Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-screen overflow-y-auto">
-            <div className="container mx-auto px-4 sm:px-6 py-6 space-y-4">
+            <div className="container mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4 max-w-sm sm:max-w-none">
               <a
                 href="#home"
-                className="flex items-center py-3 px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold"
+                className="flex items-center py-2 sm:py-3 px-3 sm:px-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-600 transition-all duration-200 rounded-xl font-semibold text-sm sm:text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <svg
-                  className="w-5 h-5 mr-3"
+                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -594,16 +594,16 @@ export default function Portfolio() {
         <div className="absolute top-20 sm:top-40 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-4 sm:-bottom-8 left-8 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-1 sm:px-3 md:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32 text-center">
+          <div className="max-w-6xl mx-auto">
             <div className="mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
               <span className="inline-block px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 ✨ Associate Business Development Executive
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-gray-900 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
-              <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent block">
+            <h1 className="text-[13px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
+              <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent block px-1 sm:px-2 md:px-0 text-center leading-tight break-normal whitespace-normal word-spacing-normal">
                 Driving Holistic Marketing Success Through Insight,
                 Innovation, and Execution
               </span>
