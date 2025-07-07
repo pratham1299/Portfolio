@@ -1277,8 +1277,7 @@ export default function Portfolio() {
                 </span>
               </h3>
               <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                Smart with research, sharp with outreach, and built for impact.
-                Let's bring your brand's voice to life.
+               Smart with research, sharp with outreach, and driven by impact. Let's bring your brand's voice to life.
               </p>
               <div className="flex space-x-4 justify-center gap-6 sm:gap-10">
                 {/* <a
