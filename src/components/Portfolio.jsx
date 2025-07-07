@@ -40,16 +40,16 @@ export default function Portfolio() {
       textColor: "text-blue-600",
       subcategories: [
         {
-          name: "LinkedIn Course - Vaibhav Sisinty",
-          url: "https://docs.google.com/document/d/1kdwHFkiJMyb-lR0KH_bvt_HfFHv-Xf1JPQuV5FrtrGo/edit?usp=sharing",
-        },
-        {
           name: "LinkedIn Marketing Strategy",
           url: "https://docs.google.com/document/d/1uA7pC3kF-IKRyERv0uuc8py7h7PexrZJI5D7WC3J-rA/edit?usp=sharing    ",
         },
         {
           name: "How to Enhance Your LinkedIn Page",
           url: "https://docs.google.com/document/d/14DQX5Go5LEX02ipjUPt8970b2FNugiFMhX9ZRK1RS6Q/edit?usp=sharing",
+        },
+        {
+          name: "LinkedIn Course - Vaibhav Sisinty",
+          url: "https://docs.google.com/document/d/1kdwHFkiJMyb-lR0KH_bvt_HfFHv-Xf1JPQuV5FrtrGo/edit?usp=sharing",
         },
       ],
     },
@@ -104,13 +104,14 @@ export default function Portfolio() {
       textColor: "text-green-600",
       subcategories: [
         {
-          name: "Apollo Outbound Process",
-          url: "https://docs.google.com/document/d/1wNGdhMstvGotL65JRDWgX0_osKTYIlyyUdV-q0wEPzg/edit?usp=sharing",
-        },
-        {
           name: "Outbound Process",
           url: "https://docs.google.com/document/d/1rDi2dh8VJ-r0fHJCAr-EdVEn4nLhV1dlVv7VP4_s0c4/edit?usp=sharing",
         },
+        {
+          name: "Apollo Outbound Process",
+          url: "https://docs.google.com/document/d/1wNGdhMstvGotL65JRDWgX0_osKTYIlyyUdV-q0wEPzg/edit?usp=sharing",
+        },
+
         {
           name: "Outbound Follow-Up Emails",
           url: "https://docs.google.com/document/d/14828VRfwj2wZmKO2U1wcGEK2htaNyzk-512sdXYnFzM/edit?usp=sharing",
@@ -637,11 +638,11 @@ export default function Portfolio() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-600 px-4">
               <a
-                href="#contact"
+                href="#projects"
                 className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-block text-center text-sm sm:text-base"
               >
                 <span className="flex items-center">
-                  GET IN TOUCH
+                  VIEW MY WORK
                   <svg
                     className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -658,11 +659,11 @@ export default function Portfolio() {
                 </span>
               </a>
               <a
-                href="#projects"
+                href="#contact"
                 className="group border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center text-sm sm:text-base"
               >
                 <span className="flex items-center">
-                  VIEW MY WORK
+                  GET IN TOUCH
                   <svg
                     className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform"
                     fill="none"
@@ -1071,7 +1072,7 @@ export default function Portfolio() {
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-purple-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
-                    Graphic Analysis
+                    Graphic Designing
                   </span>
                 </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
@@ -1277,7 +1278,8 @@ export default function Portfolio() {
                 </span>
               </h3>
               <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-               Smart with research, sharp with outreach, and driven by impact. Let's bring your brand's voice to life.
+                Smart with research, sharp with outreach, and built for impact.
+                Let's bring your brand's voice to life.
               </p>
               <div className="flex space-x-4 justify-center gap-6 sm:gap-10">
                 {/* <a
