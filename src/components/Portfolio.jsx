@@ -35,6 +35,50 @@ export default function Portfolio() {
 
   // Define dropdown menu structure with nested options
   const workCategories = {
+    "Account-Based Marketing": {
+      icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
+      bgColor: "bg-indigo-100",
+      hoverBgColor: "group-hover:bg-indigo-200",
+      textColor: "text-indigo-600",
+      subcategories: [
+        {
+          name: "Event Lead Lifecycle",
+          url: "https://docs.google.com/document/d/1ch2zMgXc19gAJxrAGu61F7Q0KrtBgvbF4n6wuB-kvCU/edit?usp=sharing",
+        },
+        {
+          name: "Post Event Wireframe",
+          url: postEventFlowChart,
+        },
+        {
+          name: "Buyer's Persona for Industrial Partnership",
+          url: industrialPersona,
+        },
+        {
+          name: "Buyer's Persona for Consultancy",
+          url: buyerPersonaPdf,
+        },
+        {
+          name: "Countries Business Culture",
+          url: "https://docs.google.com/document/d/1LO46wPrM15zIE8WPpPWahJlUX3IxSdCL63RV_DS-Blw/edit?usp=sharing",
+        },
+        {
+          name: "One pager-CRO Action Plan",
+          url: "https://docs.google.com/presentation/d/15qEWEcjXVkJdgqPsB7pnaEKyE07_TtFneWtgCCQZrrQ/edit?usp=sharing",
+        },
+        {
+          name: "Business Development: Outbound",
+          url: "https://docs.google.com/presentation/d/1CQ6AVHrZIubkZ45jEU6oORRB9IPjZ3jFF-Zo6JG9aZI/edit?usp=sharing",
+        },
+        {
+          name: "CRO Audit Template",
+          url: "https://docs.google.com/presentation/d/1NoY9NDFuqIiZzFX58FCVI8b7pxdmuxn9x6zlZwuAB0g/edit?usp=sharing",
+        },
+        {
+          name: "CRO Excel Template",
+          url: "https://docs.google.com/spreadsheets/d/1r90kfRsW_Vv0NXJO6KI6k_cmcvaHLqUSMwlUn12yL-U/edit?usp=sharing",
+        },
+      ],
+    },
     "LinkedIn Outreach": {
       icon: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z",
       bgColor: "bg-blue-100",
@@ -129,50 +173,6 @@ export default function Portfolio() {
         {
           name: "Additional Contributions",
           url: "https://docs.google.com/document/d/14iWeVlvrdGLSolxubok76L2ZBd4b9f83GjgTAmRJots/edit?usp=sharing",
-        },
-      ],
-    },
-    "Account-Based Marketing": {
-      icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
-      bgColor: "bg-indigo-100",
-      hoverBgColor: "group-hover:bg-indigo-200",
-      textColor: "text-indigo-600",
-      subcategories: [
-        {
-          name: "Event Lead Lifecycle",
-          url: "https://docs.google.com/document/d/1ch2zMgXc19gAJxrAGu61F7Q0KrtBgvbF4n6wuB-kvCU/edit?usp=sharing",
-        },
-        {
-          name: "Post Event Wireframe",
-          url: postEventFlowChart,
-        },
-        {
-          name: "Buyer's Persona for Industrial Partnership",
-          url: industrialPersona,
-        },
-        {
-          name: "Buyer's Persona for Consultancy",
-          url: buyerPersonaPdf,
-        },
-        {
-          name: "Countries Business Culture",
-          url: "https://docs.google.com/document/d/1LO46wPrM15zIE8WPpPWahJlUX3IxSdCL63RV_DS-Blw/edit?usp=sharing",
-        },
-        {
-          name: "One pager-CRO Action Plan",
-          url: "https://docs.google.com/presentation/d/15qEWEcjXVkJdgqPsB7pnaEKyE07_TtFneWtgCCQZrrQ/edit?usp=sharing",
-        },
-        {
-          name: "Business Development: Outbound",
-          url: "https://docs.google.com/presentation/d/1CQ6AVHrZIubkZ45jEU6oORRB9IPjZ3jFF-Zo6JG9aZI/edit?usp=sharing",
-        },
-        {
-          name: "CRO Audit Template",
-          url: "https://docs.google.com/presentation/d/1NoY9NDFuqIiZzFX58FCVI8b7pxdmuxn9x6zlZwuAB0g/edit?usp=sharing",
-        },
-        {
-          name: "CRO Excel Template",
-          url: "https://docs.google.com/spreadsheets/d/1r90kfRsW_Vv0NXJO6KI6k_cmcvaHLqUSMwlUn12yL-U/edit?usp=sharing",
         },
       ],
     },
@@ -1245,10 +1245,11 @@ export default function Portfolio() {
               <h4 className="text-xl font-bold mb-3 text-gray-900">
                 Lead Generation Workflows(Outbound)
               </h4>
-              <p className="text-gray-600">
-                Designed multi-step Lead Generation Workflows(Outbound) to
-                improve lead quality and response rates in cold
-                outreach and ads.
+              <p className="text-gray-600 text-center">
+                Designed multi-step Lead Generation Workflows (Outbound) to
+                improve lead quality and response rates in cold outreach.
+                Learned bulk extraction, email campaigns on Smartlead,
+                and buyer personas.
               </p>
             </div>
 
