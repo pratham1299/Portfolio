@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import buyerPersonaPdf from "../assets/Professional Marketing Buyer Persona A4 Document (1).pdf";
 import businessPlanPdf from "../assets/PG.pdf";
+import industrialPersona from "../assets/User Personas Presentation.pdf";
+import eventLeadPdf from "../assets/Event leads lifecycle.pdf";
+import postEventFlowChart from "../assets/Event Leads Lifecycle From Event to Engagement.pdf";
 
 export default function Portfolio() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -137,7 +140,19 @@ export default function Portfolio() {
       textColor: "text-indigo-600",
       subcategories: [
         {
-          name: "Buyer's Persona",
+          name: "Event Lead Lifecycle",
+          url: eventLeadPdf,
+        },
+        {
+          name: "Post Event Wireframe",
+          url: postEventFlowChart,
+        },
+        {
+          name: "Buyer's Persona for Industrial Partnership",
+          url: industrialPersona,
+        },
+        {
+          name: "Buyer's Persona for Consultancy",
           url: buyerPersonaPdf,
         },
         {
