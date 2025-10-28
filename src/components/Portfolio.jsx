@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import buyerPersonaPdf from "../assets/Professional Marketing Buyer Persona A4 Document (1).pdf";
 import businessPlanPdf from "../assets/PG.pdf";
 import industrialPersona from "../assets/User Personas Presentation.pdf";
-import eventLeadPdf from "../assets/Event leads lifecycle.pdf";
 import postEventFlowChart from "../assets/Event Leads Lifecycle From Event to Engagement.pdf";
 
 export default function Portfolio() {
@@ -141,7 +140,7 @@ export default function Portfolio() {
       subcategories: [
         {
           name: "Event Lead Lifecycle",
-          url: eventLeadPdf,
+          url: "https://docs.google.com/document/d/1ch2zMgXc19gAJxrAGu61F7Q0KrtBgvbF4n6wuB-kvCU/edit?usp=sharing",
         },
         {
           name: "Post Event Wireframe",
