@@ -939,7 +939,7 @@ export default function Portfolio() {
               </div>
               <p className="text-xl md:text-2xl font-light">Hands-On Tools</p>
               <p className="text-blue-100 mt-2">
-                Apollo.io,Smart Lead, LinkedIn Sales Navigator, Meta, Google,
+                Apollo.io, Smart Lead, LinkedIn Sales Navigator, Meta, Google,
                 GA4, etc
               </p>
             </div>
@@ -1091,14 +1091,15 @@ export default function Portfolio() {
                     A/B Testing
                   </span>
                 </div> */}
-                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
-                  <span className="text-gray-700 font-medium text-sm">
-                    Google Suite
-                  </span>
-                </div>
+
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-purple-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     Graphic Designing
+                  </span>
+                </div>
+                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
+                  <span className="text-gray-700 font-medium text-sm">
+                    Google Suite
                   </span>
                 </div>
                 {/* <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
