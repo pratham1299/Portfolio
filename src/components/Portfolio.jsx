@@ -79,26 +79,6 @@ export default function Portfolio() {
         },
       ],
     },
-    "LinkedIn Outreach": {
-      icon: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z",
-      bgColor: "bg-blue-100",
-      hoverBgColor: "group-hover:bg-blue-200",
-      textColor: "text-blue-600",
-      subcategories: [
-        {
-          name: "LinkedIn Marketing Strategy",
-          url: "https://docs.google.com/document/d/1uA7pC3kF-IKRyERv0uuc8py7h7PexrZJI5D7WC3J-rA/edit?usp=sharing    ",
-        },
-        {
-          name: "How to Enhance Your LinkedIn Page",
-          url: "https://docs.google.com/document/d/14DQX5Go5LEX02ipjUPt8970b2FNugiFMhX9ZRK1RS6Q/edit?usp=sharing",
-        },
-        {
-          name: "LinkedIn Course - Vaibhav Sisinty",
-          url: "https://docs.google.com/document/d/1kdwHFkiJMyb-lR0KH_bvt_HfFHv-Xf1JPQuV5FrtrGo/edit?usp=sharing",
-        },
-      ],
-    },
     "Market Research": {
       icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
       bgColor: "bg-pink-100",
@@ -185,6 +165,26 @@ export default function Portfolio() {
         {
           name: "LinkedIn Marketing Funnels",
           url: "https://docs.google.com/document/d/1fQ6n8P7aad9Czy29_0KwAiP7atfz92a8o4n1pZXMmD8/edit?usp=sharing",
+        },
+      ],
+    },
+    "LinkedIn Outreach": {
+      icon: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z",
+      bgColor: "bg-blue-100",
+      hoverBgColor: "group-hover:bg-blue-200",
+      textColor: "text-blue-600",
+      subcategories: [
+        {
+          name: "LinkedIn Marketing Strategy",
+          url: "https://docs.google.com/document/d/1uA7pC3kF-IKRyERv0uuc8py7h7PexrZJI5D7WC3J-rA/edit?usp=sharing    ",
+        },
+        {
+          name: "How to Enhance Your LinkedIn Page",
+          url: "https://docs.google.com/document/d/14DQX5Go5LEX02ipjUPt8970b2FNugiFMhX9ZRK1RS6Q/edit?usp=sharing",
+        },
+        {
+          name: "LinkedIn Course - Vaibhav Sisinty",
+          url: "https://docs.google.com/document/d/1kdwHFkiJMyb-lR0KH_bvt_HfFHv-Xf1JPQuV5FrtrGo/edit?usp=sharing",
         },
       ],
     },
@@ -622,7 +622,7 @@ export default function Portfolio() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
               <span className="inline-block px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-                ✨ Associate Business Development Executive
+                ✨ Executive – Marketing Intelligence Analyst
               </span>
             </div>
 
@@ -643,10 +643,10 @@ export default function Portfolio() {
                 </span>
               </p>
               <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 md:mb-12 text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-                I'm a results-oriented Associate Business Development Executive
-                with hands-on experience in performance marketing, outbound
-                campaigns, research & development, off-page, SEO, and
-                outreach strategies.
+                I'm a results-oriented Executive – Marketing Intelligence
+                Analyst with hands-on experience in market intelligence, data
+                extraction, cold outreach, outbound campaigns, research &
+                development, off-page SEO, and outreach strategies.
               </p>
             </div>
 
@@ -928,7 +928,8 @@ export default function Portfolio() {
                 Projects Executed
               </p>
               <p className="text-blue-100 mt-2">
-                Completed across Outreach, Ads, CRO & Off Page SEO
+                Completed across Outreach, Lead Generation, Ads, CRO & Off Page
+                SEO
               </p>
             </div>
 
@@ -938,7 +939,8 @@ export default function Portfolio() {
               </div>
               <p className="text-xl md:text-2xl font-light">Hands-On Tools</p>
               <p className="text-blue-100 mt-2">
-                Meta, Google, Apollo.io, LinkedIn Sales Navigator, GA4, etc
+                Smart Lead, Apollo.io, LinkedIn Sales Navigator, Meta, Google,
+                GA4, etc
               </p>
             </div>
 
@@ -1069,6 +1071,16 @@ export default function Portfolio() {
               </div>
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Skills</h3>
               <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-pink-200 text-center">
+                  <span className="text-gray-700 font-medium text-sm">
+                    Process Wireframing
+                  </span>
+                </div>
+                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-pink-200 text-center">
+                  <span className="text-gray-700 font-medium text-sm">
+                    Email Automation
+                  </span>
+                </div>
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     Competitor & Market Research
@@ -1118,8 +1130,9 @@ export default function Portfolio() {
               </span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-              Delivered data-driven marketing initiatives including LinkedIn
-              outreach, PPC optimization, SEO tactics, and R&D to inform
+              Delivered data-driven marketing initiatives including LinkedIn &
+              email outreach, Lead Generation, Buyer's Persona, PPC
+              optimization, SEO tactics, and R&D to inform
               decision-making and fuel growth
             </p>
           </div>
