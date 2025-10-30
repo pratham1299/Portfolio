@@ -928,8 +928,8 @@ export default function Portfolio() {
                 Projects Executed
               </p>
               <p className="text-blue-100 mt-2">
-                Completed across Outreach, Lead Generation, Ads, CRO & Off Page
-                SEO
+                Completed across Outreach, Lead Generation, Buyer Persona, Ads,
+                CRO & Off Page SEO
               </p>
             </div>
 
@@ -939,7 +939,7 @@ export default function Portfolio() {
               </div>
               <p className="text-xl md:text-2xl font-light">Hands-On Tools</p>
               <p className="text-blue-100 mt-2">
-                Smart Lead, Apollo.io, LinkedIn Sales Navigator, Meta, Google,
+                Apollo.io,Smart Lead, LinkedIn Sales Navigator, Meta, Google,
                 GA4, etc
               </p>
             </div>
@@ -1086,11 +1086,11 @@ export default function Portfolio() {
                     Competitor & Market Research
                   </span>
                 </div>
-                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-blue-200 text-center">
+                {/* <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-blue-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     A/B Testing
                   </span>
-                </div>
+                </div> */}
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     Google Suite
@@ -1101,11 +1101,11 @@ export default function Portfolio() {
                     Graphic Designing
                   </span>
                 </div>
-                <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
+                {/* <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     Meta Ads
                   </span>
-                </div>
+                </div> */}
                 <div className="bg-white/70 backdrop-blur-sm px-3 py-2 rounded-lg border border-pink-200 text-center">
                   <span className="text-gray-700 font-medium text-sm">
                     Off Page SEO
